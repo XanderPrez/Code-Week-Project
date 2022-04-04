@@ -20,7 +20,49 @@ header {
     margin-bottom: 20px;
 }
 
+#title-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+h1 {
+    border-radius: 10px;
+    margin: 12px 10px;
+    color: white;
+    text-shadow: 1px 1px black;
+    background: repeating-linear-gradient(
+  45deg,
+  black,
+  black 10px,
+  pink 10px,
+  black 20px
+);
+}
+
+.logo {
+   width: 35px;
+   margin: 14px 6px;
+}
+
+h4 {
+    color: rgb(241, 230, 230);
+    font-size: medium;
+    font-style: oblique;
+    text-shadow: 1px 1px black;
+}
+
 h2 {
     margin-bottom: 20px;
     line-height: 31px;
+    color: rgb(241, 230, 230);
+    font-style: italic;
+    text-shadow: 1px 1px black;
 }
+
+#citySelector {
+    border-radius: 4px;
+    background-color: transparent 80%;
+}
+
