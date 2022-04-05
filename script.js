@@ -4,7 +4,8 @@ const q = (selector) => document.querySelector(selector);
 
 const selectedEl = q('.citySelector'); // seleziono il select in html
 const cityEl = q('.cityName'); // seleziono l'elemento città nella card
-const todayWthrEl = q('.todayWeather'); // seleziono il meteo odierno
+const iconEl = q('#img-container'); // seleziono l'icona default
+// const todayWthrEl = q('.todayWeather'); // seleziono il meteo odierno
 const descriptionEl = q('.description'); // seleziono la descrizione meteo
 
 
@@ -36,8 +37,10 @@ selectedEl.addEventListener('change', () => { //con questa funzione, al cambio d
 
 function displayWeather() { // assegno i valori ai tag
     cityEl.innerHTML = weather.city;
-    todayWthrEl.innerHTML = weather.main;
+    iconEl.innerHTML = `<img class="icon" src="./icons/${weather.main}.png" alt="icona meteo"/>` // inserisce l'icona meteo
+    // todayWthrEl.innerHTML = weather.main;
     descriptionEl.innerHTML = weather.description;
+    console.log(iconEl);
 };
 
 

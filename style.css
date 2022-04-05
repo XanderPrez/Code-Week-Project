@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,300;1,400&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +15,7 @@ body {
     background-size: cover;
     background-color: cornflowerblue;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* HEADER STYLE */
@@ -34,13 +38,14 @@ h1 {
     margin: 12px 10px;
     color: white;
     text-shadow: 1px 1px black;
-    background: repeating-linear-gradient(
-  45deg,
-  black,
-  black 10px,
-  pink 10px,
-  black 20px
-);
+}
+
+.pink {
+    color: pink;
+}
+
+span {
+    color: rgb(35, 32, 32);
 }
 
 .logo {
@@ -49,7 +54,7 @@ h1 {
 }
 
 h4 {
-    color: rgb(241, 230, 230);
+    color: white;
     font-size: medium;
     font-style: oblique;
     text-shadow: 1px 1px black;
@@ -58,9 +63,10 @@ h4 {
 h2 {
     margin-bottom: 20px;
     line-height: 31px;
-    color: rgb(241, 230, 230);
+    color: white;
     font-style: italic;
     text-shadow: 1px 1px black;
+    font-size: 24px;
 }
 
 /* SELECTOR STYLE */
@@ -80,8 +86,8 @@ h2 {
 
 #weatherCard {
     box-sizing: border-box;
-    width:150px;
-    height: 150px;
+    width:200px;
+    height: 300px, auto;
     display: flex;
     border-radius: 5px;
     border-color: lightskyblue;
@@ -90,6 +96,14 @@ h2 {
     justify-content: space-evenly;
     text-align: center;
     flex-direction: column; 
-    background: antiquewhite;  
+    background: antiquewhite; 
+    opacity: 90%;
+    backdrop-filter: blur(20px); 
+}
+
+.icon {
+    width: 40%;
+    margin: 10px 10px;
+    opacity: 90%;
 }
 
