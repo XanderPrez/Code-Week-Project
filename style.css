@@ -14,6 +14,8 @@ body {
     text-align: center;
 }
 
+/* HEADER STYLE */
+
 header {
     display: block;
     text-align: center;
@@ -61,8 +63,32 @@ h2 {
     text-shadow: 1px 1px black;
 }
 
+/* SELECTOR STYLE */
+
 #citySelector {
     border-radius: 4px;
     background-color: transparent 80%;
+    margin-bottom: 60px; 
+}
+
+/* CARD STYLE */
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+#weatherCard {
+    box-sizing: border-box;
+    width:150px;
+    height: 150px;
+    display: flex;
+    border-radius: 5px;
+    border-color: lightskyblue;
+    border-style:double; 
+    box-shadow: 1px 1px black;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-direction: column;   
 }
 
