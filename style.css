@@ -86,9 +86,10 @@ h2 {
     border-radius: 5px;
     border-color: lightskyblue;
     border-style:double; 
-    box-shadow: 1px 1px black;
+    box-shadow: 1px 1px rgb(44, 99, 133);
     justify-content: space-evenly;
     text-align: center;
-    flex-direction: column;   
+    flex-direction: column; 
+    background: antiquewhite;  
 }
 
