@@ -15,7 +15,7 @@ let apiKey = '1d00d4c9d5554bbb1fc814776caff71d'; // la mia chiave API
 
 const weather = {}; // object
 
-const kelvin = 273;
+const kelvin = 273.15;
 
 /* URL CREATION AND FETCH FUNCTION */
 
@@ -48,7 +48,7 @@ function displayWeather() { // assegno i valori ai tag
     // todayWthrEl.innerHTML = weather.main;
     descriptionEl.innerHTML = weather.description;
     degrees.innerHTML = Math.round(weather.temperature-kelvin)+" C°";
-    console.log(iconEl);
 };
 
 
+export {apiKey, weather, kelvin}

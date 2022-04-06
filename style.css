@@ -107,3 +107,38 @@ h2 {
     opacity: 90%;
 }
 
+ /* RESPONSIVE 990
+@media all and (max-width: 990px) {
+    body {
+        background-image: url("sfondo.jpg");
+        height: 990px;
+        width: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: cornflowerblue;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    h1 {
+        font-size: auto;
+        margin: 0, auto;
+    }
+
+    .logo {
+        width: 20%;
+        margin: auto;
+        padding: auto, 0;
+    }
+
+    h4 {
+        font-size: 30px;
+        width: auto;
+        height: auto;
+        text-align: center;
+    
+    } 
+
+
+} */
