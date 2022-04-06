@@ -1,22 +1,38 @@
 <!DOCTYPE html>
+
 <html lang="en">
+    
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Weather Forecast</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <!-- HEADER -->
     <header>
+
+        <!-- TITLE -->
         <div id="title-container">
             <img src="./icons/Clear.png" alt="Sun logo" class="logo">
             <h1><span class="pink">P</span><span>a</span><span class="pink">l</span><span>e</span><span class="pink">r</span><span>m</span><span class="pink">o</span> Meteo</h1>
             <img src="./icons/Drizzle.png" alt="Sun logo" class="logo">
         </div>
+
+        <!-- INTRO -->
         <h4>Your simple and easy to use weather forecast web app for Palermo's province. <br>Check your current weather before going out!</h4>
     </header>
+
+    <!-- DESCRIPTION -->
     <h2>Here's a complete list of all the cities and towns near Palermo; <br> select the one you're looking for:</h2>   
+    
+    <!-- SELECTOR -->
     <select name="citySelector" class="citySelector" id="citySelector">
         <option selected disabled> Select a city or a town...</option>
         <option value="alia">Alia</option>
@@ -105,14 +121,13 @@
     <div class="container">
         <div id="weatherCard">
             <p class="cityName">Select a city</p>
-            <div id="img-container">
-            </div>
+            <div id="img-container"></div><span id="temperature"></span>
             <!-- <p class="todayWeather">-</p> -->
             <p class="description">or a town!</p>
         </div>
     </div>
     
-
+    <!-- JAVASCRIPT -->
     <script src="./script.js"></script>
 </body>
 </html>
