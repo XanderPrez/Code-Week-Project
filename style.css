@@ -122,6 +122,13 @@ h2 {
     margin: auto;
 }
 
+.error {
+    margin-top: 20px;
+    font-size: larger;
+    color: red;
+    font-family:'Franklin Gothic Medium';
+}
+
 /*FONT MODIFIERS*/
 
 .fontItalic {

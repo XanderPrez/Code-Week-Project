@@ -1,6 +1,10 @@
 import {q, cityEl, descriptionEl, degrees, iconEl, apiKey, weather, kelvin} from "./main.js"
 
+/* VARIABLES */
+let latitude = 0.0;
+let longitude = 0.0;
 let city = null;
+const notificationEl = q(".error")
 
 const paProvince = [
     "alia",
@@ -87,7 +91,6 @@ const paProvince = [
     "villafrati"
 ]
 
-
 let inputName = q("#search");
 
 /* SEARCH BAR EVENT */
@@ -110,6 +113,54 @@ inputName.addEventListener("keyup", function(event) {
     }
 });
 
+/* GEOLOCATION TOOL */
+
+if ("geolocation" in navigator) { // condizione se if true, funziona e mi rimanda ad una delle due funzioni;  
+    navigator.geolocation.getCurrentPosition(getPosition, showError)
+} else { // else, non applicabile al browser e parte un messaggio.
+    notificationEl.style.display = 'block';
+    notificationEl.innerHTML = `<p>This Browser doesn't support geolocation</p>`;
+};
+
+function getPosition(position) { // da qui ottengo i dati posizione
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude;
+
+    getLocWeather(latitude, longitude);
+};
+
+descriptionEl.addEventListener("load", (event) => { // avvio il processo al load della pagina
+    getLocWeather(latitude, longitude);
+});
+
+function showError(error) { // questa funzione si avvia al blocco del permesso
+    notificationEl.style.display = 'block';
+    notificationEl.innerHTML = `<p> ${error.message} </p>`;
+};
+
+function getLocWeather(latitude, longitude) { // utilizzo i valori lat e long e li inserisco nella fetch per poi passarli alla funzione card render
+    let apiUrl =  `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&&lon=${longitude}&appid=${apiKey}`;
+
+    fetch(apiUrl)
+    .then(function (response) {
+        let data = response.json()
+        return data;
+    })
+    .then(function (data) {
+        weather.city = data.name,
+        weather.main = data.weather[0].main,
+        weather.description = data.weather[0].description,
+        weather.temperature = data.main.temp
+    })
+    .then( () => {
+        displayWeather()
+    });
+};
+
+/*--------------------------------------------*/
+
+/* SEARCH FETCH */
+
 function getSearchWeather(city) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
@@ -128,6 +179,8 @@ function getSearchWeather(city) {
         displayWeather()
     });
 };
+
+/* CARD RENDER */
 
 function displayWeather() {
     cityEl.innerHTML = weather.city;
