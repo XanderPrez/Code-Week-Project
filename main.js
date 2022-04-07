@@ -51,4 +51,4 @@ function displayWeather() { // assegno i valori ai tag
 };
 
 
-export {apiKey, weather, kelvin}
+export {q, cityEl, iconEl, descriptionEl, degrees, apiKey, weather, kelvin}

@@ -1,23 +1,111 @@
-import {apiKey, weather, kelvin} from "./main.js"
-const q = (selector) => document.querySelector(selector);
-const cityEl = q('.cityName'); 
-const iconEl = q('#img-container');
-const descriptionEl = q('.description');
-const degrees = q('#temperature'); 
+import {q, cityEl, descriptionEl, degrees, iconEl, apiKey, weather, kelvin} from "./main.js"
 
 let city = null;
-console.log(city);
+
+const paProvince = [
+    "alia",
+    "alimena",
+    "aliminusa",
+    "altavilla milicia",
+    "altofonte",
+    "bagheria",
+    "balestrate",
+    "baucina",
+    "belmonte mezzagno",
+    "bisacquino",
+    "blufi",
+    "bolognetta",
+    "bompietro",
+    "borgetto",
+    "caccamo",
+    "caltavuturo",
+    "campofelice di fitalia",
+    "campofelice di roccella",
+    "campofiorito",
+    "camporeale",
+    "capaci",
+    "castelbuono",
+    "casteldaccia",
+    "castellana sicula",
+    "castronovo di sicilia",
+    "carini",
+    "cefalà diana",
+    "cefalù",
+    "cerda",
+    "chiusa sclafani",
+    "ciminna",
+    "cinisi",
+    "collesano",
+    "contessa entellina",
+    "corleone",
+    "ficarazzi",
+    "gangi",
+    "geraci siculo",
+    "giardinello",
+    "giuliana",
+    "godrano",
+    "gratteri",
+    "isnello",
+    "isola delle femmine",
+    "lascari",
+    "lercara friddi",
+    "marineo",
+    "mezzojuso",
+    "misilmeri",
+    "montelepre",
+    "montemaggiore belsito",
+    "monreale",
+    "palazzo adriano",
+    "palermo",
+    "partinico",
+    "petralia soprana",
+    "petralia sottana",
+    "piana degli albanesi",
+    "polizzi generosa",
+    "pollina",
+    "prizzi",
+    "roccamena",
+    "roccapalumba",
+    "san cipirello",
+    "san giuseppe jato",
+    "san mauro castelverde",
+    "santa cristina gela",
+    "santa flavia",
+    "sclafani bagni",
+    "sciara",
+    "scillato",
+    "termini imerese",
+    "terrasini",
+    "torretta",
+    "trabia",
+    "trappeto",
+    "ustica",
+    "valledolmo",
+    "ventimiglia di sicilia",
+    "vicari",
+    "villabate",
+    "villafrati"
+]
+
 
 let inputName = q("#search");
 
+/* SEARCH BAR EVENT */
 inputName.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
 
         event.preventDefault();
 
         city = inputName.value.split(" ").join("+").toLowerCase(); // qui mi vado a sostituire gli spazi con + e imposto lower case
-        console.log(city);
-        getSearchWeather(city);
+
+        if (paProvince.some(x => x === city)) {
+            getSearchWeather(city)
+            inputName.value = "";
+        } else {
+            alert("Il nome inserito non corrisponde a nessun comune della provincia di Palermo")
+            inputName.value = "";
+        }
+        
         
     }
 });
@@ -41,10 +129,9 @@ function getSearchWeather(city) {
     });
 };
 
-function displayWeather() { // assegno i valori ai tag
+function displayWeather() {
     cityEl.innerHTML = weather.city;
-    iconEl.innerHTML = `<img class="icon" src="./icons/${weather.main}.png" alt="icona meteo"/>` // inserisce l'icona meteo
-    // todayWthrEl.innerHTML = weather.main;
+    iconEl.innerHTML = `<img class="icon" src="./icons/${weather.main}.png" alt="icona meteo"/>` 
     descriptionEl.innerHTML = weather.description;
     degrees.innerHTML = Math.round(weather.temperature-kelvin)+" C°";
 };
