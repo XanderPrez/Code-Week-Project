@@ -7,13 +7,17 @@
     box-sizing: border-box;
 }
 
-body {
-    background-image: url("sfondo.jpg");
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
+/*ADAPTIVE BG*/
+
+html {
+    background: url(./sfondo.jpg) no-repeat center center fixed;
     background-size: cover;
-    background-color: cornflowerblue;
+    height: 100%;
+    overflow: hidden;
+  }
+
+body {
+    margin: auto, auto;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
