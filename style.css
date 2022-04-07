@@ -96,7 +96,7 @@ h2 {
     justify-content: space-evenly;
     text-align: center;
     flex-direction: column; 
-    background: antiquewhite; 
+    background: azure; 
     opacity: 90%;
     backdrop-filter: blur(20px); 
 }
@@ -105,4 +105,23 @@ h2 {
     width: 40%;
     margin: 10px 10px;
     opacity: 90%;
+}
+
+#temperature {
+    font-size: 40px;
+    color: rgb(223, 114, 84);
+    border: 0.1em;
+    background-color: rgb(233, 240, 240);
+    border-radius: 10px;
+    border-color: lightskyblue;
+    padding: auto;
+    margin: auto;
+}
+
+/*FONT MODIFIERS*/
+
+.fontItalic {
+    margin-top: 6px;
+    font-style:italic;
+    
 }

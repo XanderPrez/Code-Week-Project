@@ -133,5 +133,6 @@ function displayWeather() {
     cityEl.innerHTML = weather.city;
     iconEl.innerHTML = `<img class="icon" src="./icons/${weather.main}.png" alt="icona meteo"/>` 
     descriptionEl.innerHTML = weather.description;
+    descriptionEl.classList.add("fontItalic");
     degrees.innerHTML = Math.round(weather.temperature-kelvin)+" C°";
 };
