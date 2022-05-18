@@ -1,5 +1,5 @@
 # Code-Week-Project
-A small web app for weather forecast
+A small web app for weather forecast created with HTML, Vanilla JavaScript and CSS.
 
 Project name: Today Weather App in Palermo
 
