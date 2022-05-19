@@ -2,8 +2,7 @@
 
 <html lang="en">
     
-<head>
-    
+<head>    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,110 +29,112 @@
         <h4>Your simple and easy to use weather forecast web app for Palermo's province. <br>Check your current weather before going out!</h4>
     </header>
 
-    <!-- DESCRIPTION -->
-    <h2>Here's a complete list of all the cities and towns near Palermo; <br> select the one you're looking for:</h2>   
-    
-    <!-- SELECTOR -->
-    <select name="citySelector" class="citySelector" id="citySelector">
-        <option selected disabled> Select a city or a town...</option>
-        <option value="alia">Alia</option>
-        <option value="alimena">Alimena</option>
-        <option value="aliminusa">Aliminusa</option>
-        <option value="altavilla+milicia">Altavilla Milicia</option>
-        <option value="altofonte">Altofonte</option>
-        <option value="bagheria">Bagheria</option>
-        <option value="balestrate">Balestrate</option>
-        <option value="baucina">Baucina</option>
-        <option value="belmonte+mezzagno">Belmonte Mezzagno</option>
-        <option value="bisacquino">Bisacquino</option>
-        <option value="blufi">Blufi</option>
-        <option value="bolognetta">Bolognetta</option>
-        <option value="bompietro">Bompietro</option>
-        <option value="borgetto">Borgetto</option>
-        <option value="caccamo">Caccamo</option>
-        <option value="caltavuturo">Caltavuturo</option>
-        <option value="campofelice+di+fitalia">Campofelice di Fitalia</option>
-        <option value="campofelice+di+roccella">Campofelice di Roccella</option>
-        <option value="campofiorito">Campofiorito</option>
-        <option value="camporeale">Camporeale</option>
-        <option value="capaci">Capaci</option>
-        <option value="castelbuono">Castelbuono</option>
-        <option value="casteldaccia">Casteldaccia</option>
-        <option value="castellana+sicula">Castellana Sicula</option>
-        <option value="castronovo+di+sicilia">Castronovo di Sicilia</option>
-        <option value="carini">Carini</option>
-        <option value="cefalà+diana">Cefalà Diana</option>
-        <option value="cefalù">Cefalù</option>
-        <option value="cerda">Cerda</option>
-        <option value="chiusa+sclafani">Chiusa Sclafani</option>
-        <option value="ciminna">Ciminna</option>
-        <option value="cinisi">Cinisi</option>
-        <option value="collesano">Collesano</option>
-        <option value="contessa+entellina">Contessa Entellina</option>
-        <option value="corleone">Corleone</option>
-        <option value="ficarazzi">Ficarazzi</option>
-        <option value="gangi">Gangi</option>
-        <option value="geraci+siculo">Geraci Siculo</option>
-        <option value="giardinello">Giardinello</option>
-        <option value="giuliana">Giuliana</option>
-        <option value="godrano">Godrano</option>
-        <option value="gratteri">Gratteri</option>
-        <option value="isnello">Isnello</option>
-        <option value="isola+delle+femmine">Isola delle Femmine</option>
-        <option value="lascari">Lascari</option>
-        <option value="lercara+friddi">Lercara Friddi</option>
-        <option value="marineo">Marineo</option>
-        <option value="mezzojuso">Mezzojuso</option>
-        <option value="misilmeri">Misilmeri</option>
-        <option value="montelepre">Montelepre</option>
-        <option value="montemaggiore+belsito">Montemaggiore Belsito</option>
-        <option value="monreale">Monreale</option>
-        <option value="palazzo+adriano">Palazzo Adriano</option>
-        <option value="palermo">Palermo</option>
-        <option value="partinico">Partinico</option>
-        <option value="petralia+soprana">Petralia Soprana</option>
-        <option value="petralia+sottana">Petralia Sottana</option>
-        <option value="piana+degli+albanesi">Piana degli Albanesi</option>
-        <option value="polizzi+generosa">Polizzi Generosa</option>
-        <option value="pollina">Pollina</option>
-        <option value="prizzi">Prizzi</option>
-        <option value="roccamena">Roccamena</option>
-        <option value="roccapalumba">Roccapalumba</option>
-        <option value="san+cipirello">San Cipirello</option>
-        <option value="san+giuseppe+jato">San Giuseppe Jato</option>
-        <option value="san+mauro+castelverde">San Mauro Castelverde</option>
-        <option value="santa+cristina+gela">Santa Cristina Gela</option>
-        <option value="santa+flavia">Santa Flavia</option>
-        <option value="sclafani+bagni">Sclafani Bagni</option>
-        <option value="sciara">Sciara</option>
-        <option value="scillato">Scillato</option>
-        <option value="termini+imerese">Termini Imerese</option>
-        <option value="terrasini">Terrasini</option>
-        <option value="torretta">Torretta</option>
-        <option value="trabia">Trabia</option>
-        <option value="trappeto">Trappeto</option>
-        <option value="ustica">Ustica</option>
-        <option value="valledolmo">Valledolmo</option>
-        <option value="ventimiglia+di+sicilia">Ventimiglia di Sicilia</option>
-        <option value="vicari">Vicari</option>
-        <option value="villabate">Villabate</option>
-        <option value="villafrati">Villafrati</option>
-    </select> 
-    
-    <!-- SEARCH BAR -->
-    <span id="textInput"><input type="text" id="search" placeholder="Type for a city or town" autocomplete="none"></span>
+    <main>
+        <!-- DESCRIPTION -->
+        <h2>Here's a complete list of all the cities and towns near Palermo; <br> select the one you're looking for:</h2>   
+        
+        <!-- SELECTOR -->
+        <select name="citySelector" class="citySelector" id="citySelector">
+            <option selected disabled> Select a city or a town...</option>
+            <option value="alia">Alia</option>
+            <option value="alimena">Alimena</option>
+            <option value="aliminusa">Aliminusa</option>
+            <option value="altavilla+milicia">Altavilla Milicia</option>
+            <option value="altofonte">Altofonte</option>
+            <option value="bagheria">Bagheria</option>
+            <option value="balestrate">Balestrate</option>
+            <option value="baucina">Baucina</option>
+            <option value="belmonte+mezzagno">Belmonte Mezzagno</option>
+            <option value="bisacquino">Bisacquino</option>
+            <option value="blufi">Blufi</option>
+            <option value="bolognetta">Bolognetta</option>
+            <option value="bompietro">Bompietro</option>
+            <option value="borgetto">Borgetto</option>
+            <option value="caccamo">Caccamo</option>
+            <option value="caltavuturo">Caltavuturo</option>
+            <option value="campofelice+di+fitalia">Campofelice di Fitalia</option>
+            <option value="campofelice+di+roccella">Campofelice di Roccella</option>
+            <option value="campofiorito">Campofiorito</option>
+            <option value="camporeale">Camporeale</option>
+            <option value="capaci">Capaci</option>
+            <option value="castelbuono">Castelbuono</option>
+            <option value="casteldaccia">Casteldaccia</option>
+            <option value="castellana+sicula">Castellana Sicula</option>
+            <option value="castronovo+di+sicilia">Castronovo di Sicilia</option>
+            <option value="carini">Carini</option>
+            <option value="cefalà+diana">Cefalà Diana</option>
+            <option value="cefalù">Cefalù</option>
+            <option value="cerda">Cerda</option>
+            <option value="chiusa+sclafani">Chiusa Sclafani</option>
+            <option value="ciminna">Ciminna</option>
+            <option value="cinisi">Cinisi</option>
+            <option value="collesano">Collesano</option>
+            <option value="contessa+entellina">Contessa Entellina</option>
+            <option value="corleone">Corleone</option>
+            <option value="ficarazzi">Ficarazzi</option>
+            <option value="gangi">Gangi</option>
+            <option value="geraci+siculo">Geraci Siculo</option>
+            <option value="giardinello">Giardinello</option>
+            <option value="giuliana">Giuliana</option>
+            <option value="godrano">Godrano</option>
+            <option value="gratteri">Gratteri</option>
+            <option value="isnello">Isnello</option>
+            <option value="isola+delle+femmine">Isola delle Femmine</option>
+            <option value="lascari">Lascari</option>
+            <option value="lercara+friddi">Lercara Friddi</option>
+            <option value="marineo">Marineo</option>
+            <option value="mezzojuso">Mezzojuso</option>
+            <option value="misilmeri">Misilmeri</option>
+            <option value="montelepre">Montelepre</option>
+            <option value="montemaggiore+belsito">Montemaggiore Belsito</option>
+            <option value="monreale">Monreale</option>
+            <option value="palazzo+adriano">Palazzo Adriano</option>
+            <option value="palermo">Palermo</option>
+            <option value="partinico">Partinico</option>
+            <option value="petralia+soprana">Petralia Soprana</option>
+            <option value="petralia+sottana">Petralia Sottana</option>
+            <option value="piana+degli+albanesi">Piana degli Albanesi</option>
+            <option value="polizzi+generosa">Polizzi Generosa</option>
+            <option value="pollina">Pollina</option>
+            <option value="prizzi">Prizzi</option>
+            <option value="roccamena">Roccamena</option>
+            <option value="roccapalumba">Roccapalumba</option>
+            <option value="san+cipirello">San Cipirello</option>
+            <option value="san+giuseppe+jato">San Giuseppe Jato</option>
+            <option value="san+mauro+castelverde">San Mauro Castelverde</option>
+            <option value="santa+cristina+gela">Santa Cristina Gela</option>
+            <option value="santa+flavia">Santa Flavia</option>
+            <option value="sclafani+bagni">Sclafani Bagni</option>
+            <option value="sciara">Sciara</option>
+            <option value="scillato">Scillato</option>
+            <option value="termini+imerese">Termini Imerese</option>
+            <option value="terrasini">Terrasini</option>
+            <option value="torretta">Torretta</option>
+            <option value="trabia">Trabia</option>
+            <option value="trappeto">Trappeto</option>
+            <option value="ustica">Ustica</option>
+            <option value="valledolmo">Valledolmo</option>
+            <option value="ventimiglia+di+sicilia">Ventimiglia di Sicilia</option>
+            <option value="vicari">Vicari</option>
+            <option value="villabate">Villabate</option>
+            <option value="villafrati">Villafrati</option>
+        </select> 
+        
+        <!-- SEARCH BAR -->
+        <span id="textInput"><input type="text" id="search" placeholder="Type for a city or town" autocomplete="none"></span>
 
-    <!-- CARD -->
-    <div class="container">
-        <div id="weatherCard">
-            <p class="cityName">Select a city</p>
-            <div id="img-container"></div><span id="temperature"></span>
-            <!-- <p class="todayWeather">-</p> -->
-            <p class="description">or a town!</p>
+        <!-- CARD -->
+        <div class="container">
+            <div id="weatherCard">
+                <p class="cityName">Select a city</p>
+                <div id="img-container"></div><span id="temperature"></span>
+                <!-- <p class="todayWeather">-</p> -->
+                <p class="description">or a town!</p>
+            </div>
         </div>
-    </div>
-    
-    <div class="error"></div>
+        
+        <div class="error"></div>
+    </main>
     
     <!-- JAVASCRIPT -->
     <script type="module" src="./main.js"></script>

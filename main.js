@@ -11,7 +11,7 @@ const degrees = q('#temperature'); // selezione lo span temperatura
 
 /* GLOBAL CONST */
 
-let apiKey = '1d00d4c9d5554bbb1fc814776caff71d'; // la mia chiave API
+let apiKey = '1855ea5308008a5df64635d709d340d3'; // la mia chiave API
 
 const weather = {}; // object
 
@@ -23,7 +23,7 @@ selectedEl.addEventListener('change', () => { //con questa funzione, al cambio d
     
     let city = selectedEl.value; // variabile a cui assegno il valore del selettore
 
-    let apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q='+city+'&appid='+apiKey; // url con cui recupero i dati per ogni singola città
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`; // url con cui recupero i dati per ogni singola città
 
 /* FETCH DATA */
     

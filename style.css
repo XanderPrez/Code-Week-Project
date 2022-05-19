@@ -17,6 +17,8 @@ html {
   }
 
 body {
+    display: flex;
+    flex-direction: column;
     margin: auto, auto;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -34,12 +36,12 @@ header {
     display: flex;
     text-align: center;
     justify-content: center;
+    width: 100%;
     
 }
 
 h1 {
-    border-radius: 10px;
-    margin: 12px 10px;
+    margin: 12px;
     color: white;
     text-shadow: 1px 1px black;
 }
@@ -128,6 +130,7 @@ h2 {
     color: red;
     font-family:'Franklin Gothic Medium';
 }
+
 
 /*FONT MODIFIERS*/
 
